@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "jewels",
+  "info": {
+    "singularName": "jewel",
+    "pluralName": "jewels",
+    "displayName": "Jewel"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Owner": {
+      "type": "string"
+    },
+    "Address": {
+      "type": "string"
+    },
+    "items": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::item.item",
+      "inversedBy": "jewels"
+    }
+  }
+}
